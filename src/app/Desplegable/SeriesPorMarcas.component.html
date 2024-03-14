@@ -1,0 +1,44 @@
+<div style="margin-left: 40px;">
+    <MarcasDesplegable (MarcaSeleccionada)="cargarSerie($event)">
+    </MarcasDesplegable>
+    <h1>LISTADO:</h1>
+    <h2>MarcaId Elegida: {{seleccion}}</h2>
+    <!-- <div>MarcaId Elegida: {{seleccion}}</div> -->
+    <table>
+        <thead>
+            <tr>
+                <th>ID_Serie</th>
+                <th>nomSerie</th>
+                <th>MarcaId</th>
+            </tr>
+        </thead>
+        <tbody>
+            <ng-container *ngFor="let serie of series">
+                <tr *ngIf=" seleccion == serie.marcaId">
+                    <td>{{serie.id}}</td>
+                    <td>{{serie.nomSerie}}</td>
+                    <td>{{serie.marcaId}}</td>
+                </tr>
+            </ng-container>
+        </tbody>
+    </table>
+    <h3>Tabla de otra manera</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>ID Serie</th>
+                <th>nomSerie</th>
+                <th>MarcaId</th>
+            </tr>
+        </thead>
+        <tbody>
+            <ng-container *ngFor="let serie2 of series2">
+                <tr>
+                    <td>{{serie2.id}}</td>
+                    <td>{{serie2.nomSerie}}</td>
+                    <td>{{serie2.marcaId}}</td>
+                </tr>
+            </ng-container>
+        </tbody>
+    </table>
+<!-- </div> -->

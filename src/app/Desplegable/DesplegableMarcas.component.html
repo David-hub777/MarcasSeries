@@ -1,0 +1,9 @@
+<select style="margin-left: 40px; margin-top: 20px; width: 90px;" [(ngModel)]="marcaElegida" (change)="cuandoCambiemos()" >
+
+    <option *ngFor="let marca of marcas" [ngValue]="marca.id"> 
+        {{marca.nomMarca}}
+    </option>
+</select>
+<!-- 
+<input type="radio" name="opciones" value="Todos" [(ngModel)]="opcionElegida" (change)="cuandoCambiemos()" >
+<span class="margenDerecha margenIzquierda2 radioClass">{{'Todos : ' + todos }}</span> -->
